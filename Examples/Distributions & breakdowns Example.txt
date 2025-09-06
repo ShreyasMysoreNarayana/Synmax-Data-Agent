@@ -1,0 +1,55 @@
+Ask a question > value counts for state_abb top 10
+Answer: returned 10 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'value_counts', 'col': 'state_abb', 'n': 10}
+  - Method: Value counts for state_abb (top 10)
+  - Preview:
+state_abb   count
+       LA 3187362
+       TX 2248913
+       PA 1656364
+       KS 1016572
+       OK  937204
+       AR  914666
+       IA  906330
+       MN  883589
+       MS  768078
+       IL  759586
+
+
+Ask a question > value counts for category_short top 10
+Answer: returned 10 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'value_counts', 'col': 'category_short', 'n': 10}
+  - Method: Value counts for category_short (top 10)
+  - Preview:
+category_short   count
+           LDC 7681024
+    Production 5975256
+  Interconnect 4724161
+    Industrial 2261969
+         Power 1129660
+       Storage  788363
+       Segment  775447
+    Accounting  149444
+ Pooling Point  130431
+           LNG   72217
+
+
+Ask a question > value counts for pipeline_name top 10
+Answer: returned 10 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'value_counts', 'col': 'pipeline_name', 'n': 10}
+  - Method: Value counts for pipeline_name (top 10)
+  - Preview:
+                              pipeline_name   count
+               Northern Natural Gas Company 2547392
+             Columbia Gas Transmission, LLC 1482203
+                    Enable Gas Transmission 1369148
+             Texas Eastern Transmission, LP 1140817
+             Tennessee Gas Pipeline Company 1076054
+            Gulf South Pipeline Company, LP  998318
+   Southern Star Central Gas Pipeline, Inc.  915240
+Natural Gas Pipeline Company of America LLC  888210
+                      Northwest Pipeline GP  785321
+Transcontinental Gas Pipe Line Company, LLC  719374

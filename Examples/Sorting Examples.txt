@@ -1,0 +1,55 @@
+Ask a question > top 10 rows by scheduled_quantity
+Answer: returned 599512 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'group_count', 'group_by': ['scheduled_quantity']}
+  - Method: Row counts by scheduled_quantity
+  - Preview:
+ scheduled_quantity  row_count
+                0.0   11476072
+                1.0     682327
+                2.0     102241
+                3.0      67620
+                4.0      62537
+                5.0      85253
+                6.0      49320
+                7.0      48414
+                8.0      45042
+                9.0      33746
+
+
+Ask a question > top 10 rows by scheduled_quantity where state_abb = TX
+Answer: returned 49 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'group_count', 'group_by': ['state_abb']}
+  - Method: Row counts by state_abb
+  - Preview:
+state_abb  row_count
+       AL     441650
+       AR     914666
+       AZ     181577
+       CA     239012
+       CO     558840
+       CT     120208
+       DC       2666
+       DE      60295
+       FL     395549
+       GA     274032
+
+
+Ask a question > top 10 rows by scheduled_quantity where category_short contains interconnect
+Answer: returned 17 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'group_count', 'group_by': ['category_short']}
+  - Method: Row counts by category_short
+  - Preview:
+category_short  row_count
+    Accounting     149444
+    Compressor      48275
+    Industrial    2261969
+  Interconnect    4724161
+           LDC    7681024
+           LNG      72217
+      Linepack       1372
+Not Classified      17476
+         Other      38858
+   Park & Loan      19597

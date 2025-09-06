@@ -1,0 +1,37 @@
+Ask a question > count rows by year
+Answer: returned 4 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'group_count', 'group_by': ['year']}
+  - Method: Row counts by year
+  - Preview:
+ year  row_count
+ 2022    6504649
+ 2023    6664545
+ 2024    6550441
+ 2025    4135220
+
+
+Ask a question > average scheduled_quantity by year
+Answer: returned 4 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'aggregate', 'group_by': ['year'], 'ops': {'scheduled_quantity': 'mean'}, 'filters': {}}
+  - Method: Aggregate with group_by/filters
+  - Preview:
+ year  scheduled_quantity
+ 2022        46149.503381
+ 2023        35740.823832
+ 2024        31275.014472
+ 2025        34082.523707
+
+
+Ask a question > sum scheduled_quantity by year
+Answer: returned 4 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'aggregate', 'group_by': ['year'], 'ops': {'scheduled_quantity': 'sum'}, 'filters': {}}
+  - Method: Aggregate with group_by/filters
+  - Preview:
+ year  scheduled_quantity
+ 2022        2.996108e+11
+ 2023        2.377289e+11
+ 2024        2.044666e+11
+ 2025        1.406161e+11

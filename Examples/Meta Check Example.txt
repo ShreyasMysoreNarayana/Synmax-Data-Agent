@@ -1,0 +1,90 @@
+Ask a question > dataset shape
+Answer: returned 1 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'meta:shape'}
+  - Method: Dataset shape
+  - Preview:
+    rows  columns
+23854855       14
+
+
+Ask a question > list columns
+Answer: returned 14 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'meta:columns'}
+  - Method: Columns and dtypes
+  - Preview:
+             column          dtype
+      pipeline_name         object
+           loc_name         object
+connecting_pipeline         object
+  connecting_entity         object
+       rec_del_sign          int64
+     category_short         object
+       country_name         object
+          state_abb         object
+        county_name         object
+           latitude datetime64[ns]
+
+
+Ask a question > show dtypes
+Answer: returned 14 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'meta:dtypes'}
+  - Method: Data types
+  - Preview:
+             column          dtype
+      pipeline_name         object
+           loc_name         object
+connecting_pipeline         object
+  connecting_entity         object
+       rec_del_sign          int64
+     category_short         object
+       country_name         object
+          state_abb         object
+        county_name         object
+           latitude datetime64[ns]
+
+
+Ask a question > missing values
+Answer: returned 14 rows x 3 columns.
+Evidence:
+  - Plan: {'type': 'meta:missing'}
+  - Method: Missing values by column
+  - Preview:
+             column  missing  missing_pct
+          longitude 23854855   100.000000
+           latitude 23854855   100.000000
+connecting_pipeline 18662066    78.231731
+  connecting_entity  2975770    12.474484
+        county_name  2477210    10.384511
+          state_abb   591309     2.478778
+ scheduled_quantity    47758     0.200202
+     category_short    33259     0.139422
+      pipeline_name        0     0.000000
+           loc_name        0     0.000000
+
+
+Ask a question > duplicate rows
+Answer: returned 1 rows x 1 columns.
+Evidence:
+  - Plan: {'type': 'meta:duplicates'}
+  - Method: Duplicate rows count
+  - Preview:
+ duplicate_rows
+         404743
+
+
+Ask a question > head 5
+Answer: returned 5 rows x 14 columns.
+Evidence:
+  - Plan: {'type': 'meta:head', 'n': 5}
+  - Method: Head (first 5 rows)
+  - Preview:
+       pipeline_name               loc_name                      connecting_pipeline                      connecting_entity  rec_del_sign category_short  country_name state_abb   county_name latitude longitude eff_gas_day  scheduled_quantity  year
+ANR Pipeline Company       ACADIA 2 INT DEL     Kinder Morgan Louisiana Pipeline LLC                Kinder Morgan Louisiana            -1   Interconnect United States        LA Acadia Parish      NaT       NaT  2022-01-01            435570.0  2022
+ANR Pipeline Company  ADRIAN/WESTSIDE PL CO                                     None              Westside Pipeline Company            -1            LDC United States        MI       Lenawee      NaT       NaT  2022-01-01             13500.0  2022
+ANR Pipeline Company                 ALBANY                                     None                         Albany City Of            -1            LDC United States        MO        Gentry      NaT       NaT  2022-01-01                60.0  2022
+ANR Pipeline Company ALDEN/WILLIAMS NAT GAS Southern Star Central Gas Pipeline, Inc. Southern Star Cenral Gas Pipeline, Inc             1   Interconnect United States        KS          Rice      NaT       NaT  2022-01-01                 0.0  2022
+ANR Pipeline Company    ALEDO/CITY OF ALEDO                                     None                      Aledo/City of Ale            -1            LDC United States        IL        Mercer      NaT       NaT  2022-01-01               445.0  2022
+

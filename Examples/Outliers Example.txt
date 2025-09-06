@@ -1,0 +1,17 @@
+Ask a question > outliers in scheduled_quantity
+Answer: returned 4097 rows x 14 columns.
+Evidence:
+  - Plan: {'type': 'anomaly:zscore', 'col': 'scheduled_quantity', 'threshold': 3.0}
+  - Method: Z-score outliers on scheduled_quantity (|z| >= 3.0)
+  - Preview:
+                   pipeline_name                                    loc_name connecting_pipeline connecting_entity  rec_del_sign category_short  country_name state_abb county_name latitude longitude eff_gas_day  scheduled_quantity  year
+  Columbia Gas Transmission, LLC Storage capacity from weekly storage report                None              None             1        Storage United States        PA        None      NaT       NaT  2022-01-01         201351857.0  2022
+     Dominion Transmission, Inc. Storage capacity from weekly storage report                None              None             1        Storage United States        PA        None      NaT       NaT  2022-01-01         221000000.0  2022
+Pacific Gas and Electric Company                         TOTAL SYSTEM DEMAND                None              None            -1          Other United States        CA        None      NaT       NaT  2022-01-01           3416000.0  2022
+Pacific Gas and Electric Company                         TOTAL SYSTEM SUPPLY                None              None             1          Other United States        CA        None      NaT       NaT  2022-01-01           3318000.0  2022
+        Questar Pipeline Company                       Working Gas Inventory                None              None             1        Storage United States        UT     Daggett      NaT       NaT  2022-01-01          36287064.0  2022
+ Southern California Gas Company                              System Sendout                None              None            -1          Other United States        CA        None      NaT       NaT  2022-01-01           3293000.0  2022
+ Southern California Gas Company                            Total Deliveries                None              None            -1            LDC United States        CA        None      NaT       NaT  2022-01-01           3293000.0  2022
+  Columbia Gas Transmission, LLC Storage capacity from weekly storage report                None              None             1        Storage United States        PA        None      NaT       NaT  2022-01-02         199848714.0  2022
+     Dominion Transmission, Inc. Storage capacity from weekly storage report                None              None             1        Storage United States        PA        None      NaT       NaT  2022-01-02         219000000.0  2022
+Pacific Gas and Electric Company                         TOTAL SYSTEM DEMAND                None              None            -1          Other United States        CA        None      NaT       NaT  2022-01-02           3454000.0  2022

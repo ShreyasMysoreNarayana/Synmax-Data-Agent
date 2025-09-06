@@ -1,0 +1,9 @@
+Ask a question > correlations
+Answer: returned 2 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'correlation', 'cols': ['scheduled_quantity', 'rec_del_sign']}
+  - Method: Pairwise Pearson correlations
+  - Preview:
+ scheduled_quantity  rec_del_sign
+           1.000000      0.014421
+           0.014421      1.000000

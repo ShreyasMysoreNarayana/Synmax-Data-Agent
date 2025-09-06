@@ -1,0 +1,27 @@
+Ask a question > sum scheduled_quantity by state_abb where year = 2024
+Answer: returned 49 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'aggregate', 'group_by': ['state_abb'], 'ops': {'scheduled_quantity': 'sum'}, 'filters': {'year': 2024}}
+  - Method: Aggregate with group_by/filters
+  - Preview:
+state_abb  scheduled_quantity
+       AL        7.037219e+09
+       AR        1.212703e+09
+       AZ        2.032874e+09
+       CA        1.112762e+10
+       CO        5.717320e+09
+       CT        6.049958e+08
+       DC        6.963581e+07
+       DE        1.345958e+08
+       FL        1.892382e+09
+       GA        1.582979e+09
+
+
+Ask a question > sum scheduled_quantity where state_abb = TX
+Answer: returned 1 rows x 1 columns.
+Evidence:
+  - Plan: {'type': 'aggregate', 'group_by': [], 'ops': {'scheduled_quantity': 'sum'}, 'filters': {'state_abb': 'TX'}}
+  - Method: Aggregate with group_by/filters
+  - Preview:
+ scheduled_quantity
+       4.486486e+10

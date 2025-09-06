@@ -1,0 +1,17 @@
+Ask a question > sum scheduled_quantity by state_abb
+Answer: returned 49 rows x 2 columns.
+Evidence:
+  - Plan: {'type': 'aggregate', 'group_by': ['state_abb'], 'ops': {'scheduled_quantity': 'sum'}, 'filters': {}}
+  - Method: Aggregate with group_by/filters
+  - Preview:
+state_abb  scheduled_quantity
+       AL        2.547546e+10
+       AR        4.475567e+09
+       AZ        7.307654e+09
+       CA        4.072399e+10
+       CO        1.929737e+10
+       CT        2.194068e+09
+       DC        2.445923e+08
+       DE        5.001183e+08
+       FL        6.828559e+09
+       GA        6.045148e+09
